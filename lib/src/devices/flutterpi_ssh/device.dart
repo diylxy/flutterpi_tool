@@ -484,7 +484,7 @@ class FlutterpiSshDevice extends Device {
     await installApp(prebuiltApp, userIdentifier: userIdentifier);
 
     final remoteInstallPath = _getRemoteInstallPath(prebuiltApp);
-    final flutterpiExePath = path.posix.join(remoteInstallPath, 'flutter-pi');
+    final flutterpiExePath = 'flutter-pi';// path.posix.join(remoteInstallPath, 'flutter-pi');
 
     final hostPort = switch (debuggingOptions.hostVmServicePort) {
       int port => port,
